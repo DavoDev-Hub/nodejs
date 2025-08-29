@@ -11,6 +11,8 @@
   "author": "Juan Pablo",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^3.1.10"
+    "get-age": "^1.0.1",
+    "nodemon": "^3.1.10",
+    "uuid": "^11.1.0"
   }
 }
