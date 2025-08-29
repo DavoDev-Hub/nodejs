@@ -2,17 +2,26 @@
 // require('./js-foundation/02-destructuring');
 //const {getUserById} = require('./js-foundation/03-callbacks');
 // const {getUserById} = require('./js-foundation/04-arrow');
-const { getAge,getUUID } = require("./plugins");
+const getPokemonById = require('./js-foundation/06-promises');
 
-const {buildMakePerson} = require('./js-foundation/05-factory');
 
-const makePerson = buildMakePerson({ getUUID, getAge})
+getPokemonById(4)
+.then(( pokemon ) => console.log( { pokemon } ))
+.catch( (err) => console.log(  'por favor intente de nuevo'  ) )
+.finally( () => console.log('Finalmente') )
 
-const obj = { name:'John', birthdate: '2004-01-13' }
 
- const john = makePerson( obj )
+// const { getAge,getUUID } = require("./plugins");
 
- console.log(john)
+// const {buildMakePerson} = require('./js-foundation/05-factory');
+
+// const makePerson = buildMakePerson({ getUUID, getAge})
+
+// const obj = { name:'John', birthdate: '2004-01-13' }
+
+//  const john = makePerson( obj )
+
+//  console.log(john)
 
 
 
