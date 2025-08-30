@@ -19,15 +19,52 @@
 // }
 
 
-const getPokemonById = ( id ) => {
+// const getPokemonById = ( id ) => {
+    // const url = `https://pokeapi.co/api/v2/pokemon/${ id }`;
+
+    // return fetch ( url ).
+    // then (( res ) =>  res.json())
+    // .then( () => {throw new Error('Pokemon no existe')} )
+    // .then( ( pokemon )  => pokemon.name)
+
+// }
+
+
+
+// const getPokemonById = async( id ) => {
+//     const url = `https://pokeapi.co/api/v2/pokemon/${ id }`;
+
+//     const res = await fetch( url );
+//     const pokemon = await res.json();
+
+//     return pokemon.name
+    // return fetch ( url ).
+    // then (( res ) =>  res.json())
+    // .then( () => {throw new Error('Pokemon no existe')} )
+    // .then( ( pokemon )  => pokemon.name)
+    // return 10;
+// }
+
+
+const {http} = require('../plugins');
+const getPokemonById = async( id ) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${ id }`;
 
-    return fetch ( url ).
-    then (( res ) =>  res.json())
-    .then( () => {throw new Error('Pokemon no existe')} )
-    .then( ( pokemon )  => pokemon.name)
+    const pokemon = await http.get(url);
+    return pokemon.name;
+    // const res = await fetch( url );
+    // const pokemon = await res.json();
 
+    // return pokemon.name
+    // return fetch ( url ).
+    // then (( res ) =>  res.json())
+    // .then( () => {throw new Error('Pokemon no existe')} )
+    // .then( ( pokemon )  => pokemon.name)
+    // return 10;
 }
 
+
+// Token de acceso
+// Publicas
 
 module.exports =  getPokemonById;
