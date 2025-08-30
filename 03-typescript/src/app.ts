@@ -1,24 +1,4 @@
-const heroes = [
-  {
-    id: 1,
-    name: "Superman",
-    power: "Super strength",
-  },
-  {
-    id: 2,
-    name: "Batman",
-    power: "Intelligence and gadgets",
-  },
-  {
-    id: 3,
-    name: "Wonder Woman",
-    power: "Super strength and agility",
-  },
-];
-
-const findHeroById = (id: number) => {
-  return heroes.find((hero) => hero.id === id);
-};
+import { findHeroById } from "./services/hero.service";
 
 const hero = findHeroById(2);
 
