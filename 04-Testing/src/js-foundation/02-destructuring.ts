@@ -4,8 +4,9 @@ const { SHELL } = process.env;
 
 // console.table({SHELL});
 
-const characters = ["Flash", "Superman", "Green Lantern", "Batman"];
+export const characters = ["Flash", "Superman", "Batman"];
 
-const [, , batman] = characters;
+const [hero, villain] = characters;
 
-console.log(batman);
+console.log(hero);
+console.log(villain);
