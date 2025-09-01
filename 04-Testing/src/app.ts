@@ -37,8 +37,8 @@
 
 //console.log(emailTemplate)
 
-import { buildLogger } from "./plugins/logger.plugin";
-const logger = buildLogger("app.ts");
+// import { buildLogger } from "./plugins/logger.plugin";
+// const logger = buildLogger("app.ts");
 
-export const name: string = "Juan";
-console.log(`Hola ${name}`);
+// export const name: string = "Juan";
+// console.log(`Hola ${name}`);
