@@ -16,7 +16,7 @@ export const users: User[] = [
 
 export function getUserById(
   id: number,
-  callback: (error: string | null, user?: User) => void
+  callback: (error: string | undefined, user?: User) => void
 ) {
   const user = users.find(function (user) {
     return user.id === id;
@@ -24,5 +24,5 @@ export function getUserById(
   if (!user) {
     return callback(`user not found with id ${id}`);
   }
-  return callback(null, user);
+  return callback(undefined, user);
 }
