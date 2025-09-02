@@ -38,15 +38,17 @@
 // return 10;
 // }
 
-const { http } = require("../plugins");
+// const { http } = require("../plugins");
+import { httpClientPlugin as http } from "../plugins/http-client.plugin";
 
-const getPokemonById = async (id: string | number): Promise<string> => {
-  const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-
-  const pokemon = await http.get(url);
-  return pokemon.name;
-  // const res = await fetch( url );
-  // const pokemon = await res.json();
+export const getPokemonById = async (id: string | number): Promise<string> => {
+  try {
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+    const pokemon = await http.get(url);
+    return pokemon.name;
+  } catch (error) {
+    throw `Pokemon not found with id ${id}`;
+  }
 
   // return pokemon.name
   // return fetch ( url ).
@@ -58,5 +60,3 @@ const getPokemonById = async (id: string | number): Promise<string> => {
 
 // Token de acceso
 // Publicas
-
-module.exports = getPokemonById;
