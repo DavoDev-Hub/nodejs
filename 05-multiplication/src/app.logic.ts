@@ -1,25 +1,30 @@
-import fs from "fs";
+import fs from 'fs';
+import { yarg } from './config/plugins/args.plugin';
 
-const message: string = "Hola Mundo!";
-
-const base = 5;
-let outputMessage = "";
-
+const { b:base, l:limit, s:showTable } = yarg;
+let outputMessage = '';
 const headerMessage = `
-=========================
-     Tabla del ${base}
-=========================
+==================================
+       Tabla del ${ base }
+==================================\n
 `;
 
-for (let i = 1; i < 10; i++) {
-  outputMessage += `${base} x ${i} = ${base * i}\n`;
+for( let i = 1; i <= limit; i++ ) {
+  outputMessage += `${ base } x ${ i } = ${ base * i }\n`;
 }
 
 outputMessage = headerMessage + outputMessage;
-console.log(outputMessage);
 
-const outputPath = `output`;
+if ( showTable ) {
+  console.log(outputMessage);
+}
+
+const outputPath = `outputs`;
+
 
 fs.mkdirSync(outputPath, { recursive: true });
-fs.writeFileSync(`${outputPath}/tabla-${base}.txt`, outputMessage);
-console.log("File created");
+fs.writeFileSync(`${ outputPath }/tabla-${ base }.txt`, outputMessage);
+console.log('File created!');
+
+// grabar en el archivo de salida
+// path: outputs/tabla-5.txt
