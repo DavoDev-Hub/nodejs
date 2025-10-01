@@ -3,13 +3,20 @@
 // const { promisify } = require('node:util');
 // const readFilePromise = promisify(fs.readFile);
 
-const fs = require('node:fs/promises'); // Nos permite trabajar con el sistema de archivos
+const { readFile } = require('node:fs/promise'); // Nos permite trabajar con el sistema de archivos
+
+
+(() =>{
+    
+} 
+)();
+
 console.log('Leyendo el primer archivo...:');
-const text = await fs.readFile('./archivo1.txt', 'utf-8');
+const text = await readFile('./archivo1.txt', 'utf-8');
 console.log('primer texto: ',text);
 console.log(' --> Haciendo otra cosa mientras se lee el primer archivo...');
 
 console.log('Leyendo el segundo archivo...:');
-const text2 = await fs.readFile('./archivo2.txt', 'utf-8');
+const text2 = await readFile('./archivo2.txt', 'utf-8');
 console.log('segundo texto: ',text2);
 
