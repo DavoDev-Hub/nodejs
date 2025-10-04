@@ -1,0 +1,27 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Pruebas con nodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavoDev-Hub/nodejs.git"
+  },
+  "keywords": [
+    "node",
+    "davodev"
+  ],
+  "author": "DavoDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavoDev-Hub/nodejs/issues"
+  },
+  "homepage": "https://github.com/DavoDev-Hub/nodejs#readme",
+  "dependencies": {
+    "picocolors": "^1.1.1"
+  }
+}
+

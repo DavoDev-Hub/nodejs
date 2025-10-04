@@ -1,0 +1,6 @@
+// X.Y.Z -> X Major, Y Minor, Z Patch
+// X la MAJOR version cuando haces cambios incompatibles en la API
+// Y la MINOR version cuando añades funcionalidades de manera retrocompatible
+// Z la PATCH version cuando haces correcciones de errores de manera retrocompatible
+// ^ -> Actualiza la versión menor y el parche pero no la mayor
+// ~ -> Actualiza solo el parche
