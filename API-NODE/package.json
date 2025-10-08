@@ -2,10 +2,10 @@
   "name": "api-node",
   "version": "1.0.0",
   "description": "",
-  "main": "2.http.js",
+  "main": "3.http.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon 2.http.js"
+    "dev": "nodemon 3.http.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +15,8 @@
   },
   "eslintConfig": {
     "extends": "standard"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
