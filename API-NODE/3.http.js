@@ -5,6 +5,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 app.use(express.json()) // hace exactamente lo mismo que el middleware comentado más abajo
+
 // middlewares
 // app.use((req, res, next) => {
 //   if (req.method !== 'POST') return next()
